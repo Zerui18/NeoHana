@@ -15,4 +15,4 @@ FOUNDATION_EXPORT const unsigned char ArchiveVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <Archive/PublicHeader.h>
 
-#import <Archive/IGArchive.h>
+#import "IGArchive.h"

@@ -17,18 +17,18 @@ class ConvboxModel: ObservableObject, IGOperatable {
     var ready = false
     
     func execute(operation: IGOperation) {
-        switch operation.type {
-        case .subtitle:
-            let string = operation.string!
-            if string.starts(with: "＃") {
-                characterName = String(string[string.index(after: string.startIndex)])
-            }
-            else {
-                subtitle = string
-            }
-        case .character:
-            characterImage
-        }
+//        switch operation.type {
+//        case .subtitle:
+//            let string = operation.string!
+//            if string.starts(with: "＃") {
+//                characterName = String(string[string.index(after: string.startIndex)])
+//            }
+//            else {
+//                subtitle = string
+//            }
+//        case .character:
+//            characterImage
+//        }
     }
     
 }

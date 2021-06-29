@@ -21,8 +21,8 @@ struct StageView: View {
     }
 }
 
-struct StageView_Previews: PreviewProvider {
-    static var previews: some View {
-        StageView(withScript: )
-    }
-}
+//struct StageView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        StageView(withScript: IGScript(fromPath: <#T##String#>))
+//    }
+//}

@@ -15,9 +15,16 @@ public class IGScript {
     
     public var currentOperation: IGOperation?
     
-    public init(fromPath path: String) throws {
-        // Read and decrypt.
-        let scriptData = try Data(contentsOf: URL(fileURLWithPath: path)).map { $0 ^ 0xff }
+//    public init(fromPath path: String) throws {
+//        // Read and decrypt.
+//        let scriptData = try Data(contentsOf: URL(fileURLWithPath: path)).map { $0 ^ 0xff }
+//        scriptBuffer = scriptData.withUnsafeBytes { UnsafeRawPointer($0.baseAddress!) }
+//        scriptBufferStart = scriptBuffer
+//        scriptBufferLength = scriptData.count
+//    }
+    
+    public init(fromFileContents data: Data) {
+        let scriptData = data.map { $0 ^ 0xff }
         scriptBuffer = scriptData.withUnsafeBytes { UnsafeRawPointer($0.baseAddress!) }
         scriptBufferStart = scriptBuffer
         scriptBufferLength = scriptData.count

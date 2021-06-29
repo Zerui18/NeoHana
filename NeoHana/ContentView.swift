@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var movie = ArchiveManager.shared.video(named: "op.mpg")
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VLCVideoView(media: $movie)
     }
 }
 
